@@ -22,8 +22,10 @@ body{
  {
  color : white;
  }
- span
- {
- color : white;
 
+ #stripe
+ {
+height: 30px;
+background-color:  white;
+text-align: center;
  }
