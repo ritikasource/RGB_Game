@@ -13,25 +13,30 @@ var hardbtn= document.querySelector("#hardbtn");
 
 easybtn.addEventListener("click",function(){
 
-hardbtn.classlist.remove("selected");
-easybtn.classlist.add("selected");
+hardbtn.classlist.replace("selects");
+easybtn.classlist.add("selects");
 color=generateRandomColor(3);
 pickcolor=selectedColor();
 colorDisplay.textContent=pickcolor;
 for(var i=0; i<square.length;i++)
 {
 	if(color[i])
+
 	{
+		square[i].style.display="block";
 		square[i].style.backgroundColor=color[i];
 	}
 	else
-		square[i].style.display="none";
+		{
+			square[i].style.display="none";
+		}
 }
 });
 
 hardbtn.addEventListener("click",function(){
-easybtn.classlist.remove("selected");
-hardbtn.classlist.add("selected");
+
+hardbtn.classlist.add("selects");
+easybtn.classlist.replace("selects");
 
 });
 
