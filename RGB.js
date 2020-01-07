@@ -6,6 +6,37 @@ var pickcolor=selectedColor();
 var messageDisplay= document.querySelector("#message");
 var h1= document.querySelector("h1");
 var resetButton= document.querySelector("#reset");
+var easybtn= document.querySelector("#easybtn");
+var hardbtn= document.querySelector("#hardbtn");
+
+
+
+easybtn.addEventListener("click",function(){
+
+hardbtn.classlist.remove("selected");
+easybtn.classlist.add("selected");
+color=generateRandomColor(3);
+pickcolor=selectedColor();
+colorDisplay.textContent=pickcolor;
+for(var i=0; i<square.length;i++)
+{
+	if(color[i])
+	{
+		square[i].style.backgroundColor=color[i];
+	}
+	else
+		square[i].style.display="none";
+}
+});
+
+hardbtn.addEventListener("click",function(){
+easybtn.classlist.remove("selected");
+hardbtn.classlist.add("selected");
+
+});
+
+
+
 
 resetButton.addEventListener("click",function()
 {
@@ -40,10 +71,10 @@ for(var i=0; i<square.length; i++)
     if(clickedColor === pickcolor)
     	{
     		messageDisplay.textContent="Correct";
-    		resetButton.textContent="Play Again?";
+            changeColor(clickedColor);
+            h1.style.backgroundColor=clickedColor;
+            resetButton.textContent="Play again?"
 
-    	    changeColor(clickedColor);
-    		h1.style.backgroundColor=clickedColor;
 
     	}
     else
