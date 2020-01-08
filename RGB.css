@@ -71,6 +71,7 @@ text-transform: uppercase;
 letter-spacing: 1px;
 height: 100%;
 transition: all 0.3s;
+outline: none;
  }
 
  button:hover{
