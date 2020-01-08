@@ -12,10 +12,8 @@ var hardbtn= document.querySelector("#hardbtn");
 
 
 easybtn.addEventListener("click",function(){
-
 easybtn.classList.add("selects");
 hardbtn.classList.remove("selects");
-
 numSquares=3;
 color=generateRandomColor(numSquares);
 pickcolor=selectedColor();
@@ -36,10 +34,8 @@ for(var i=0; i<square.length;i++)
 });
 
 hardbtn.addEventListener("click",function(){
-
 hardbtn.classList.add("selects");
 easybtn.classList.remove("selects");
-
 numSquares=6;
 color=generateRandomColor(numSquares);
 pickcolor=selectedColor();
@@ -66,7 +62,6 @@ resetButton.addEventListener("click",function()
    //pick color
    pickcolor= selectedColor();
 
-
    //change the color
    colorDisplay.textContent=pickcolor;
 
@@ -77,6 +72,9 @@ for(var i=0; i<square.length; i++)
 }
 h1.style.backgroundColor="steelblue";
 });
+
+
+   colorDisplay.textContent=pickcolor;
 
 
 for(var i=0; i<square.length; i++)
@@ -90,7 +88,7 @@ for(var i=0; i<square.length; i++)
     //compare it with the picked color
     if(clickedColor === pickcolor)
     	{
-    		messageDisplay.textContent="Correct";
+    		messageDisplay.textContent="Correct!";
     		resetButton.textContent="Play again?"
 
             changeColor(clickedColor);
@@ -102,7 +100,7 @@ for(var i=0; i<square.length; i++)
     {
 
     this.style.backgroundColor = "#232323";
-    messageDisplay.textContent="Try Again";
+    messageDisplay.textContent="Try Again!";
 
 
 
