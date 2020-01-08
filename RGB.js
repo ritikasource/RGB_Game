@@ -13,8 +13,8 @@ var hardbtn= document.querySelector("#hardbtn");
 
 easybtn.addEventListener("click",function(){
 
-easybtn.classlist.add("selects");
-hardbtn.classlist.remove("selects");
+easybtn.classList.add("selects");
+hardbtn.classList.remove("selects");
 
 numSquares=3;
 color=generateRandomColor(numSquares);
@@ -37,8 +37,8 @@ for(var i=0; i<square.length;i++)
 
 hardbtn.addEventListener("click",function(){
 
-hardbtn.classlist.add("selects");
-easybtn.classlist.remove("selects");
+hardbtn.classList.add("selects");
+easybtn.classList.remove("selects");
 
 numSquares=6;
 color=generateRandomColor(numSquares);
