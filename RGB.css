@@ -26,10 +26,10 @@ body{
  #stripe
  {
 height: 30px;
-background-color:  white;
+background:  white;
 text-align: center;
  }
  .selects
  {
- 	background-color: blue;
+ 	background: blue;
  }

@@ -1,5 +1,5 @@
-
-var color = generateRandomColor(6);
+var numSquares=6;
+var color = generateRandomColor(numSquares);
 var square=document.querySelectorAll(".square");
 var colorDisplay=document.getElementById("colorDisplay");
 var pickcolor=selectedColor();
@@ -13,9 +13,11 @@ var hardbtn= document.querySelector("#hardbtn");
 
 easybtn.addEventListener("click",function(){
 
-hardbtn.classlist.replace("selects");
 easybtn.classlist.add("selects");
-color=generateRandomColor(3);
+hardbtn.classlist.remove("selects");
+
+numSquares=3;
+color=generateRandomColor(numSquares);
 pickcolor=selectedColor();
 colorDisplay.textContent=pickcolor;
 for(var i=0; i<square.length;i++)
@@ -23,7 +25,7 @@ for(var i=0; i<square.length;i++)
 	if(color[i])
 
 	{
-		square[i].style.display="block";
+		//square[i].style.display="block";
 		square[i].style.backgroundColor=color[i];
 	}
 	else
@@ -36,8 +38,21 @@ for(var i=0; i<square.length;i++)
 hardbtn.addEventListener("click",function(){
 
 hardbtn.classlist.add("selects");
-easybtn.classlist.replace("selects");
+easybtn.classlist.remove("selects");
 
+numSquares=6;
+color=generateRandomColor(numSquares);
+pickcolor=selectedColor();
+colorDisplay.textContent=pickcolor;
+for(var i=0; i<square.length;i++)
+{
+	
+		square[i].style.backgroundColor=color[i];
+		square[i].style.display="block";
+
+
+
+}
 });
 
 
@@ -46,7 +61,7 @@ easybtn.classlist.replace("selects");
 resetButton.addEventListener("click",function()
 {
    //generate random colors
-     color = generateRandomColor(6);
+     color = generateRandomColor(numSquares);
 
    //pick color
    pickcolor= selectedColor();
@@ -76,9 +91,10 @@ for(var i=0; i<square.length; i++)
     if(clickedColor === pickcolor)
     	{
     		messageDisplay.textContent="Correct";
+    		resetButton.textContent="Play again?"
+
             changeColor(clickedColor);
             h1.style.backgroundColor=clickedColor;
-            resetButton.textContent="Play again?"
 
 
     	}
