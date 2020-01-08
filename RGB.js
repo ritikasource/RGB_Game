@@ -61,6 +61,8 @@ resetButton.addEventListener("click",function()
 
    //pick color
    pickcolor= selectedColor();
+   this.textContent="New color";
+   messageDisplay.textContent="";
 
    //change the color
    colorDisplay.textContent=pickcolor;
