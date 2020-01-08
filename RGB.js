@@ -75,7 +75,7 @@ for(var i=0; i<square.length; i++)
 	//color set intially
 	square[i].style.backgroundColor=color[i];
 }
-h1.style.backgroundColor="#232323";
+h1.style.backgroundColor="steelblue";
 });
 
 
